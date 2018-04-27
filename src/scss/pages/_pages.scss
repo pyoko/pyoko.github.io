@@ -1,0 +1,12 @@
+.page-intro,
+.page-headline {
+	height: 100vh;
+}
+
+.page-headline,
+.page-expertise {
+	& > div {
+		grid-column-start: 2;
+		grid-row-start: 2;
+	}
+}

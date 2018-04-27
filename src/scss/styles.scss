@@ -1,0 +1,58 @@
+// @Imports
+// ==========================================================================
+
+@import 'vars/_reset.scss';
+@import 'vars/_colors.scss';
+@import 'vars/_fonts.scss';
+
+// Defaults
+// ==========================================================================
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	font-size: 13px;
+}
+
+a {
+	&:hover { 
+		text-decoration: none;
+	}
+}
+
+.grid {
+	display: grid;
+}
+
+.hide {
+	display: none;
+}
+
+.button {
+	background-color: transparent;
+	border: 2px solid var(--main-color);
+	border-radius: 50px;
+	display: inline-block;
+	text-transform: uppercase;
+	padding: .8rem 1rem;
+	transition: all .3s ease-in-out;
+
+	&:hover {
+		padding: .8rem 1.4rem;
+	}
+}
+
+// Page Intro
+// ==========================================================================
+
+@import 'pages/_pages.scss';
+@import 'pages/_page-intro.scss';
+@import 'pages/_page-headline.scss';
+@import 'pages/_page-expertise.scss';
+@import 'pages/_page-contact.scss';
+
+// Media Queries
+// ==========================================================================
+
+@import 'media-queries/_media-550.scss';
+

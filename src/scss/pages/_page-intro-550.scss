@@ -1,0 +1,17 @@
+.page-intro {
+	.overlay-layer {
+		h1 {
+			font-size: 3vw;
+
+			& > span:first-child {
+				font-size: 5vw;
+			}
+		}
+	}
+
+	.know-me-more {
+		span {
+			padding: .2rem;
+		}
+	}
+}

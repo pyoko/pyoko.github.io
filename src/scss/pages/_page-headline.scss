@@ -1,0 +1,52 @@
+.page-headline {
+	background-color: var(--tosca-color);
+	color: var(--main-color);
+	grid-template-columns: 1fr 80vw 1fr;
+	grid-template-rows: 1fr max-content 1fr;
+
+	& > div {
+		grid-template-columns: auto 1fr auto;
+		grid-template-rows: auto auto;
+		grid-row-gap: 5vw;
+		grid-template-areas:
+			"my-photo headline headline"
+			"about-me about-me about-me";
+	}
+
+	.photo {
+		grid-area: my-photo;
+		margin-right: .7rem;
+
+		b {
+			background: url('../images/rikko.jpg') 50% 50% no-repeat;
+			background-size: cover;
+			border-radius: 50%;
+			display: block;
+
+			height: 30vw;
+			width: 30vw;
+		}
+	}
+
+	.headline {
+		grid-area: headline;
+
+		span {
+			display: block;
+			font-size: 4.5vw;
+		}
+
+		span:first-child {
+			font-size: 7vw
+		}
+
+		span:last-child {
+			font-weight: 300;
+		}
+	}
+
+	.about-me {
+		grid-area: about-me;
+	}
+
+}

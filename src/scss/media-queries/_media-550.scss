@@ -1,0 +1,10 @@
+@media screen and (min-width: 550px) {
+	body {
+		font-size: 15px;
+	}
+
+	@import '../pages/_page-intro-550.scss';
+	@import '../pages/_page-headline-550.scss';
+	@import '../pages/_page-expertise-550.scss';
+	@import '../pages/_page-contact-550.scss';
+}

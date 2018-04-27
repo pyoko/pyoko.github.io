@@ -1,0 +1,59 @@
+.page-expertise {
+	grid-template-columns: minmax(10vw, 1fr) auto minmax(10vw, 1fr);
+	grid-template-rows: minmax(10vh, 1fr) auto minmax(10vh, 1fr);
+
+	min-height: 100vh;
+
+	.expertise-grid {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		grid-column-gap: 4vw;
+		grid-row-gap: 2vh;
+		grid-template-areas:
+			"expertise-strategy expertise-strategy expertise-strategy"
+			"expertise-code expertise-code expertise-code"
+			"expertise-mobile-first expertise-mobile-first expertise-mobile-first"
+	}
+
+	.expertise-header {
+		grid-area: expertise-header;
+		margin-bottom: 5rem;
+
+		h1 {
+			font-size: 2rem;
+			text-align: center;
+			text-transform: uppercase;
+		}
+	}
+
+	.expertise-strategy {
+		grid-area: expertise-strategy;
+	}
+
+	.expertise-code {
+		grid-area: expertise-code;
+	}
+
+	.expertise-mobile-first {
+		grid-area: expertise-mobile-first;
+	}
+
+
+	.expertise-strategy,
+	.expertise-code,
+	.expertise-mobile-first {
+		header {
+			margin-bottom: 2rem;
+		}
+
+		header,
+		article {
+			text-align: center;
+		}
+
+		.icon {
+			color: var(--tosca-color);
+			font-size: 5rem;
+		}
+	}
+}

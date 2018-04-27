@@ -1,0 +1,19 @@
+.page-contact {
+	grid-template-columns: 1fr 40vw 1fr;
+
+	.contact-footer {
+		grid-template-areas:
+			". . . ."
+			". contact-footer-header contact-footer-links ."
+			". contact-footer-header contact-footer-links ."
+			". . . .";
+
+		header {
+			text-align: left;
+		}
+
+		footer {
+			text-align: right;
+		}
+	}
+}
