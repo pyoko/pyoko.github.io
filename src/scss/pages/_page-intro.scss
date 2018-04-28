@@ -11,16 +11,9 @@
 		//position: absolute;
 		height: 100%;
 		width: 100%;
-
-		display: grid;
-		grid-template-columns: 1fr max-content 1fr;
-		grid-template-rows: minmax(auto, 10vh) max-content 1fr;
 	}
 
 	.looking-for-me {
-		grid-column-start: 2;
-		grid-row-start: 2;
-
 		h1 {
 			font-size: 6.5vw;
 			line-height: 1.6;
@@ -57,10 +50,6 @@
 	}
 
 	.know-me-more {
-		grid-column: 1 / span 3;
-		grid-row-start: 3;
-		align-self: end;
-
 		a {
 			display: block;
 
@@ -86,6 +75,55 @@
 			width: 30px;
 
 			transition: all .3s ease-in-out;
+		}
+	}
+}
+
+// ==========================================================================
+// Flex
+// ==========================================================================
+
+.page-intro {
+	.overlay-layer {
+		flex-flow: column;
+	}
+
+	.looking-for-me {
+		height: 85vh;
+		padding-top: 5rem;
+	}
+
+	.know-me-more {
+		height: 15vh;
+	}
+}
+
+// ==========================================================================
+// Grid
+// ==========================================================================
+
+@supports (display: grid) {
+	.page-intro {
+		.overlay-layer {
+			grid-template-columns: 1fr max-content 1fr;
+			grid-template-rows: minmax(auto, 10vh) 1fr max-content;
+		}
+
+		.looking-for-me {
+			grid-column-start: 2;
+			grid-row-start: 2;
+			align-self: center;
+
+			height: auto;
+			padding-top: 0;
+		}
+
+		.know-me-more {
+			grid-column: 1 / span 3;
+			grid-row-start: 3;
+			align-self: end;
+
+			height: auto;
 		}
 	}
 }

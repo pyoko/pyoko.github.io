@@ -1,21 +1,52 @@
 .page-contact {
-	grid-template-columns: 1fr minmax(40vw, 400px) 1fr;
-	grid-template-rows: minmax(20px, 1fr) auto 1fr 45px;
+	
+}
 
-	.contact-footer {
-		grid-row-gap: 0;
-		grid-template-areas:
-			". . . ."
-			". contact-footer-header contact-footer-links ."
-			". contact-footer-header contact-footer-links ."
-			". . . .";
+// ==========================================================================
+// Flex
+// ==========================================================================
 
-		header {
-			text-align: left;
+.page-contact {
+	& > div {
+		height: 75vh;
+		padding: 1.5rem 7rem 1rem;
+	}
+
+	& > footer {
+		height: 25vh;
+	}
+}
+
+// ==========================================================================
+// Grid
+// ==========================================================================
+
+@supports (display: grid) {
+	.page-contact {
+		grid-template-columns: 1fr minmax(40vw, 400px) 1fr;
+		grid-template-rows: minmax(20px, 1fr) auto 1fr 50px;
+
+		& > div,
+		& > footer {
+			height: initial;
+			padding: initial;
 		}
 
-		footer {
-			text-align: right;
+		.contact-footer {
+			grid-row-gap: 0;
+			grid-template-areas:
+				". . . ."
+				". contact-footer-header contact-footer-links ."
+				". contact-footer-header contact-footer-links ."
+				". . . .";
+
+			header {
+				text-align: left;
+			}
+
+			footer {
+				text-align: right;
+			}
 		}
 	}
 }

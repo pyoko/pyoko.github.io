@@ -9,9 +9,49 @@
 		}
 	}
 
+	.hire-me {
+		margin-top: 1rem;
+	}
+
 	.know-me-more {
 		span {
 			padding: .2rem;
+		}
+	}
+}
+
+// ==========================================================================
+// Flex
+// ==========================================================================
+
+.page-intro {
+	.overlay-layer {
+		flex-flow: column;
+	}
+
+	.looking-for-me {
+		height: 75vh;
+		padding-top: 2rem;
+	}
+
+	.know-me-more {
+		height: 25vh;
+	}
+}
+
+// ==========================================================================
+// Grid
+// ==========================================================================
+
+@supports (display: grid) {
+	.page-intro {
+		.looking-for-me {
+			height: auto;
+			padding-top: 0;
+		}
+
+		.know-me-more {
+			height: auto;
 		}
 	}
 }

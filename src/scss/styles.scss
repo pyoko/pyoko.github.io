@@ -21,11 +21,11 @@ a {
 }
 
 .grid {
-	display: grid;
+	display: flex;
 }
 
 .hide {
-	display: none;
+	display: none !important;
 }
 
 .button {
@@ -39,6 +39,15 @@ a {
 
 	&:hover {
 		padding: .8rem 1.4rem;
+	}
+}
+
+// Feature Queries
+// ==========================================================================
+
+@supports (display: grid) {
+	.grid {
+		display: grid;
 	}
 }
 

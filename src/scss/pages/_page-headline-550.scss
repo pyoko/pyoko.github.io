@@ -1,17 +1,4 @@
 .page-headline {
-	& > div {
-		grid-column-gap: 20px;
-		grid-template-areas:
-			"headline my-photo about-me"
-			"headline my-photo about-me";
-	}
-
-	.photo,
-	.headline,
-	.about-me {
-		align-self: center;
-	}
-
 	.photo {
 		margin-right: 0;
 
@@ -22,16 +9,79 @@
 	}
 
 	.headline {
-		span {
-			font-size: 1.6vw;
-		}
-
 		span:first-child {
 			font-size: 4vw
 		}
+	}
+}
 
-		span:last-child {
-			font-weight: 700;
+// ==========================================================================
+// Flex
+// ==========================================================================
+
+.page-headline {
+	.photo {
+		padding-right: 1rem;
+		width: 25%;
+	}
+
+	.headline {
+		width: 75%;
+
+		span {
+			font-size: initial;
+		}
+	}
+
+	.about-me {
+		margin-top: 1rem;
+	}
+}
+
+// ==========================================================================
+// Grid
+// ==========================================================================
+
+@supports (display: grid) {
+	.page-headline {
+		& > div {
+			grid-column-gap: 20px;
+			grid-template-areas:
+				"headline my-photo about-me"
+				"headline my-photo about-me";
+		}
+		
+		.photo,
+		.headline,
+		.about-me {
+			align-self: center;
+		}
+
+		.photo {
+			text-align: initial;
+			padding-right: initial;
+			width: auto;
+		}		
+
+		.headline {
+			width: auto;
+
+			span {
+				font-size: 1.7vw;
+			}
+
+			span:first-child {
+				font-size: 4vw
+			}
+
+			span:last-child {
+				font-weight: 700;
+			}
+		}
+
+		.about-me {
+			margin-top: initial;
+			font-size: 2.5vh;
 		}
 	}
 }
